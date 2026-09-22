@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}HW1{% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <a href="/">소개</a>
+        <a href="/profile">취미</a>
+        <a href="/greet/이종석">인사</a>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>
