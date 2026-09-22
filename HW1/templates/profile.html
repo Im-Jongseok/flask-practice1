@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ name }}의 취미{% endblock %}
+
+{% block content %}
+<h1>{{ name }}의 취미</h1>
+<ul>
+    {% for hobby in hobbies %}
+    <li>{{ hobby }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -10,3 +10,13 @@ def home():
         name="이종석",
         student_id="21011615",
     )
+
+
+@app.route("/profile")
+def profile():
+    hobbies = ["독서", "자전거", "등산"]
+    return render_template(
+        "profile.html",
+        name="이종석",
+        hobbies=hobbies,
+    )
