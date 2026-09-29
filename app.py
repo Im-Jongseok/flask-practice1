@@ -19,3 +19,14 @@ def profile(username):
 @app.route("/post/<int:pid>")
 def post(pid):
     return f"<h1>{pid}번 글 (자료형: {type(pid).__name__})</h1>"
+
+@app.route("/notes/")
+def notes():
+    return "<h1>메모 목록</h1>"
+
+@app.route("/hello")
+@app.route("/hello/<name>")
+def hello(name=None):
+    if name:
+        return f"<h1>안녕하세요, {name}!</h1>"
+    return "<h1>안녕하세요!</h1>"
