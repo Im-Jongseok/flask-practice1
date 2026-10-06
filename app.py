@@ -13,7 +13,7 @@ def about_page():
 
 @app.route("/user/<username>")
 def user_profile(username):
-    return render_template("profile.html", name=username, posts=["첫 글", "두 번째 글"])
+    return render_template("profile.html", username=username, posts=[])
 
 @app.route("/post/<int:pid>")
 def post(pid):

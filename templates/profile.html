@@ -1,7 +1,11 @@
-<h1>{{ name }}의 프로필</h1>
-<h2>글 목록 ({{ posts|length }}개)</h2>
-<ul>
-    {% for post in posts %}
-    <li>{{ loop.index }}. {{ post }}</li>
-    {% endfor %}
-</ul>
+<h1>{{ username }}의 프로필</h1>
+{% if posts %}
+    <h2>글 목록 ({{ posts|length }}개)</h2>
+    <ul>
+        {% for post in posts %}
+        <li>{{ loop.index }}. {{ post }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>아직 쓴 글이 없습니다.</p>
+{% endif %}
