@@ -12,8 +12,8 @@ def about_page():
     return "<h1>소개 페이지</h1>"
 
 @app.route("/user/<username>")
-def profile(username):
-    return f"<h1>{username}님의 프로필</h1>"
+def user_profile(username):
+    return render_template("profile.html", name=username, posts=["첫 글", "두 번째 글"])
 
 @app.route("/post/<int:pid>")
 def post(pid):
