@@ -51,4 +51,16 @@ def write():
         <input type="text" name="melon" >
         <button type="submit">보내기</button>
     </form>'''
-        
+
+@app.route("/attach", methods=["GET", "POST"])
+def attach():
+    if request.method == "POST":
+        file = request.files.get("cherry")
+        if file is None:
+            return 'cherry가 files에 없습니다.'
+        return f'{file.filename} / {len(file.read())} bytes.'
+    return '''
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="cherry">
+        <button type="submit">보내기</button>
+    </form>'''
