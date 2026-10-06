@@ -37,3 +37,18 @@ def search():
     if not query:
         return "<h1>검색어를 입력해주세요.</h1>"
     return f"<h1>'{query}' 검색 결과 {page} 페이지</h1>"
+
+@app.route("/write", methods=["GET", "POST"])
+def write():
+    if request.method == "POST":
+        banana = request.form["banana"]
+        melon = request.form["melon"]
+        return (f'banana = {banana} ({type(banana).__name__}) / '
+                f'melon = {melon} ({type(melon).__name__})')
+    return '''
+    <form method="post">
+        <input type="text" name="banana">
+        <input type="text" name="melon" >
+        <button type="submit">보내기</button>
+    </form>'''
+        
