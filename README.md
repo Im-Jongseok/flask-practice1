@@ -15,6 +15,6 @@
 | 4주차 | [app.py](./app.py) · [HW1](./HW1/) | Flask 설치, 기본 라우팅과 자기소개 페이지 |
 | 5주차 | [app.py](./app.py) | 동적 URL과 여러 경로를 사용하는 라우팅 |
 | 6주차 | [app.py](./app.py) | 쿼리 문자열, GET·POST 폼 처리와 파일 업로드 |
-| 7주차 | [templates](./templates/) · [todo_app](./todo_app/) · [HW2](./HW2/) | 템플릿 상속, Todo 앱과 완료 체크, SQLAlchemy·SQLite 연동 |
+| 7주차 | [templates](./templates/) · [todo_app](./todo_app/) · [HW2](./HW2/) | 템플릿 상속, Todo 앱zja과 완료 체크, SQLAlchemy·SQLite 연동 |
 
 ※ 커밋 규칙은 [COMMIT_CONVENTION.md](./COMMIT_CONVENTION.md) 참고
