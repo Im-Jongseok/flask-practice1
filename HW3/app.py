@@ -12,10 +12,12 @@ db = SQLAlchemy(app)
 class Todo(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     text = db.Column(db.String(100), nullable=False)
+    note = db.Column(db.String(200))
     done = db.Column(db.Boolean, default=False)
 
-    def __init__(self, text):
+    def __init__(self, text, note=''):
         self.text = text
+        self.note = note
         self.done = False
 
     def __repr__(self):
@@ -25,8 +27,11 @@ class Todo(db.Model):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
-        text = request.form['todo']
-        todo = Todo(text=text)
+        text = request.form.get('todo', '').strip()
+        note = request.form.get('note', '')
+        if not 1 <= len(text) <= 100 or len(note) > 200:
+            return '할 일은 1~100자, 설명은 200자 이하로 입력해주세요.', 400
+        todo = Todo(text=text, note=note)
 
         db.session.add(todo)
         db.session.commit()

@@ -6,7 +6,8 @@
     <h2>Add New Todo</h2>
 
     <form method="post">
-        <input type="text" name="todo" required>
+        <input type="text" name="todo" aria-label="할 일" placeholder="할 일" maxlength="100" required>
+        <input type="text" name="note" aria-label="설명" placeholder="설명" maxlength="200">
         <button type="submit">Add Todo</button>
     </form>
 
@@ -18,6 +19,7 @@
                 <li>
                     <a href="{{ url_for('toggle', id=todo.id) }}">완료</a>
                     <span{% if todo.done %} class="done"{% endif %}>{{ todo.text }}</span>
+                    <span class="note">{{ todo.note or '' }}</span>
                     <a href="{{ url_for('delete', id=todo.id) }}">Delete</a>
                 </li>
             {% endfor %}
