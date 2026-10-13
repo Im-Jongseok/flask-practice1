@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}할 일 수정 - Todo App{% endblock %}
+
+{% block content %}
+    <h2>할 일 수정</h2>
+    <form method="post">
+        <input type="text" name="todo" aria-label="할 일" placeholder="할 일" value="{{ todo.text }}" maxlength="100" required>
+        <input type="text" name="note" aria-label="설명" value="{{ todo.note or '' }}" placeholder="설명" maxlength="200">
+        <button type="submit">저장</button>
+    </form>
+    <a href="{{ url_for('index') }}">목록으로</a>
+{% endblock %}

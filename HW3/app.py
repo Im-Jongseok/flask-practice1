@@ -42,6 +42,22 @@ def index():
     return render_template('index.html', todos=todos)
 
 
+@app.route('/edit/<int:id>', methods=['GET', 'POST'])
+def edit(id):
+    todo = db.get_or_404(Todo, id)
+    if request.method == 'POST':
+        text = request.form.get('todo', '').strip()
+        note = request.form.get('note', '')
+        if not 1 <= len(text) <= 100 or len(note) > 200:
+            return '할 일은 1~100자, 설명은 200자 이하로 입력해주세요.', 400
+        todo.text = text
+        todo.note = note
+        db.session.commit()
+        return redirect(url_for('index'))
+
+    return render_template('edit.html', todo=todo)
+
+
 @app.route('/delete/<int:id>')
 def delete(id):
     todo = db.get_or_404(Todo, id)
