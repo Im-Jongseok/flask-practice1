@@ -1,3 +1,10 @@
+---
+title: "Web Based System"
+university: "세종대학교"
+course: "웹기반시스템"
+semester: "2026-2"
+---
+
 # Web Based System
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
@@ -6,7 +13,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![WebGL](https://img.shields.io/badge/WebGL-990000?logo=webgl&logoColor=white)
 
-세종대학교 웹기반시스템 과목의 주차별 실습과 과제를 기록합니다.
+과목의 주차별 실습과 과제를 기록합니다.
 
 ## 주차별 자료
 
