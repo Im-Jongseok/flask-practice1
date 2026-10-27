@@ -93,10 +93,15 @@ todo_input = api.model("TodoInput", {
 @ns.route("/")
 class TodoList(Resource):
     @ns.doc("목록 보기")
+    @ns.param("done", "true면 완료만, false면 미완료만 조회")
     @ns.marshal_list_with(todo_model)
     def get(self):
-        """할 일을 전부 돌려준다"""
-        return Todo.query.all()
+        """할 일 목록을 조회하고 done이 있으면 완료 여부로 필터링한다"""
+        query = Todo.query
+        done = request.args.get("done")
+        if done is not None:
+            query = query.filter_by(done=(done.lower() == "true"))
+        return query.all()
 
     @ns.doc("새로 만들기")
     @ns.expect(todo_input, validate=True)
