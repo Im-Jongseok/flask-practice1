@@ -70,7 +70,7 @@ api = Api(
     api_bp,
     version="1.0",
     title="Todo API",
-    description="[4장] todo 앱 API",
+    description="설명과 완료 여부 필터를 제공하는 Todo API",
     doc="/docs",
 )
 ns = api.namespace("todos", description="할 일 관리")
