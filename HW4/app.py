@@ -11,7 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get(
 )
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-app.config["ERROR_404_HELP"] = False
+app.config["RESTX_ERROR_404_HELP"] = False
 app.config["RESTX_JSON"] = {"ensure_ascii": False}
 
 db = SQLAlchemy(app)
