@@ -29,6 +29,6 @@ semester: "2026-2"
 | 6주차 | [app.py](./app.py) | 쿼리 문자열, GET·POST 폼 처리와 파일 업로드 |
 | 7주차 | [templates](./templates/) · [todo_app](./todo_app/) · [HW2](./HW2/) | 템플릿 상속, Todo 앱과 완료 체크, SQLAlchemy·SQLite 연동 |
 | 8주차 | [todo_app](./todo_app/) · [HW3](./HW3/) | Todo 설명 입력·수정 화면, REST API와 Swagger UI |
-| 10주차 | [todo_app](./todo_app/) · [실습 테스트](./todo_app/test_api.py) · [HW4](./HW4/) | 설명 API 확장, 완료 여부 필터와 API 회귀 테스트 |
+| 10주차 | [todo_app](./todo_app/) · [실습 테스트](./todo_app/test_api.py) · [HW4](./HW4/) · [HW5](./HW5/) | 설명 API 확장, 완료 여부 필터와 API 회귀 테스트, 매출 데이터 전처리와 분석 |
 
 ※ 커밋 규칙은 [COMMIT_CONVENTION.md](./COMMIT_CONVENTION.md) 참고
