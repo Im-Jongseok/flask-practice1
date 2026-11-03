@@ -5,6 +5,11 @@ course: "웹기반시스템"
 semester: "2026-2"
 ---
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./.github/assets/sejong-university-dark.png">
+  <img src="./.github/assets/sejong-university-light.png" alt="세종대학교 Sejong University" width="200">
+</picture>
+
 # Web Based System
 
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
